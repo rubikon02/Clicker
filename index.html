@@ -6,37 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Clicker</title>
     <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body class="unselectable">
     <div id="content">
-
         <p id="points">Points: 0</p>
-        <div class="wrapper autoWrapper">
-            <button id="clicker">Click</button>
-        </div>
-        
-        <div class="wrapper autoWrapper">
-            <button id="reset">Reset</button>
+        <div class="d-flex justify-content-center">
+            <div class="cointainer">
+                <button id="clicker" class="btn btn-success btn-lg">Click</button>
+            </div>
+            
+            <div class="cointainer">
+                <button id="reset" class="btn btn-success btn-lg">Reset</button>
+            </div>
         </div>
         
         <br>
-
-        <div class="wrapper">
-            <button id="add1" class="add" value="1">+1</button>
-        </div>
-        <div class="wrapper">
-            <button id="add2" class="add" value="5">+5</button>
-        </div>
-        <div class="wrapper">
-            <button id="add3" class="add" value="10">+10</button>
-        </div>
-        <div class="wrapper">
-            <button id="add4" class="add" value="25">+25</button>
-        </div>
-        <div class="wrapper">
-            <button id="add5" class="add" value="100">+100</button>
-        </div>
         
+        <div id="adds" class="d-flex justify-content-center">
+            <div class="cointainer">
+                <button id="add1" class="add btn btn-info" value="1">+1</button>
+            </div>
+            <div class="cointainer">
+                <button id="add2" class="add btn btn-info" value="5">+5</button>
+            </div>
+            <div class="cointainer">
+                <button id="add3" class="add btn btn-info" value="10">+10</button>
+            </div>
+            <div class="cointainer">
+                <button id="add4" class="add btn btn-info" value="25">+25</button>
+            </div>
+            <div class="cointainer">
+                <button id="add5" class="add btn btn-info" value="100">+100</button>
+            </div>
+        </div>
 
 
 
