@@ -1,0 +1,61 @@
+.wrapper {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    margin: auto;
+    top: 80%;
+    padding: 1em;
+    display: inline-block;
+}
+
+.wrapper > button {
+    width: 100%;
+    height: 100%;
+    font-weight: 900;
+    font-family: arial;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.autoWrapper {
+    width: auto;
+    font-size: 1.5em;
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+    background-color: #3366cc;
+    outline: solid 10px black;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 1em;
+    text-align: center;
+    /* margin: 100px; */
+    background-color:#575757;
+}
+
+p#points {
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+    font-family: "Impact";
+    font-size: 5em;
+    letter-spacing: 0.05em;
+    color: white;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
