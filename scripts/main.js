@@ -26,7 +26,6 @@ document.querySelector('#reset').onclick = function() {
     localStorage.setItem('points', 0);
 }
 
-//coś z neta z akapitu niżej
 for (let i = 0; i < myAdds.length; i++) {
     myAdds[i].addEventListener("click", function() {
         add = myAdds[i].getAttribute("value");

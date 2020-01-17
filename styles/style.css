@@ -27,7 +27,12 @@ html {
 body {
     padding: 1em;
     text-align: center;
-    background-color:#575757;
+    /* background-color:#575757; */
+}
+
+.cena {
+    font-size: 1.1em;
+    color: white;
 }
 
 p#points {
