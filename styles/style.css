@@ -16,6 +16,12 @@
     justify-content: center;
 }
 
+.addCointainer {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
 #clicker, #reset {
     margin: 10px;
 }
@@ -31,8 +37,12 @@ body {
 }
 
 .cena {
-    font-size: 1.1em;
     color: white;
+    margin: 3px;
+}
+
+span.cena {
+    font-size: 1em;
 }
 
 p#points {
