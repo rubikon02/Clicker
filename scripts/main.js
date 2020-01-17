@@ -30,6 +30,10 @@ document.querySelector('#reset').onclick = function() {
 for (let i = 0; i < myAdds.length; i++) {
     myAdds[i].addEventListener("click", function() {
         add = myAdds[i].getAttribute("value");
+        for (let j = 0; j < myAdds.length; j++) {
+            myAdds[j].className = 'add waves-effect waves-light btn'
+        }
+        myAdds[i].className = 'add waves-effect waves-light btn disabled'
     });
 }
 
