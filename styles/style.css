@@ -11,6 +11,11 @@
     margin: 3px;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
 #clicker, #reset {
     margin: 10px;
 }
@@ -22,7 +27,6 @@ html {
 body {
     padding: 1em;
     text-align: center;
-    /* margin: 100px; */
     background-color:#575757;
 }
 
