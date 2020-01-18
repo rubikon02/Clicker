@@ -1,5 +1,5 @@
 let myButton = document.querySelector('#clicker');
-let myreset = document.querySelector('#reset');
+let myReset = document.querySelector('#reset');
 let myPoints = document.querySelector('#points');
 let myAdds = document.querySelectorAll('.add');
 let myShop = document.querySelectorAll('a.cena');
@@ -26,6 +26,11 @@ myReset.onclick = function() {
     points = 0;
     myPoints.textContent = 'Points: ' + points;
     localStorage.setItem('points', 0);
+    add = 1;
+    for (let i = 1; i < myShop.length; i++) {
+        myAdds[i].classList.add('disabled');
+        myShop[i].classList.remove('disabled');
+    }
 }
 
 //wybór lepszego kliku
