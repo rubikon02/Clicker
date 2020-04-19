@@ -5,20 +5,36 @@ let myAdds = document.querySelectorAll('.add');
 let myShop = document.querySelectorAll('a.cena');
 let add = 1;
 let points;
+let shop = new Array(myShop.length);
+
 
 //wczytanie punktów zapisanych lokalnie
-if(!localStorage.getItem('points')) {
-    points = 0;
-} else {
+if(localStorage['points'] != null) {
     points = parseInt(localStorage.getItem('points'));
     myPoints.textContent = 'Points: ' + points;
+} else {
+    points = 0;
+}
+
+//wczytanie sklepu zapisanego lokalnie
+if(localStorage['shop'] != null) {
+    shop = JSON.parse(localStorage.getItem('shop'));
+    for (let i = 0; i < shop.length; i++) {
+            if (shop[i] == 1) {
+                myAdds[i].classList.remove('disabled');
+                myShop[i].classList.add('disabled');
+            }
+        }
+} else {
+    shop.fill(0);
+    localStorage.setItem('shop', JSON.stringify(shop))
 }
 
 //główny przycisk
 myButton.onclick = function() {
     points += parseInt(add);
     myPoints.textContent = 'Points: ' + points;
-    localStorage.setItem('points', points);
+    localStorage.setItem('points', parseInt(points));
 }
 
 //reset
@@ -48,6 +64,11 @@ for (let i = 0; i < myShop.length; i++) {
             myPoints.textContent = 'Points: ' + points;
             myAdds[i].classList.remove('disabled');
             myShop[i].classList.add('disabled');
+
+            // zapisanie stanu sklepu w localstorage
+            shop = JSON.parse(localStorage.getItem('shop'));
+            shop[i] = 1;
+            localStorage.setItem('shop', JSON.stringify(shop));
         }
     });
 }
